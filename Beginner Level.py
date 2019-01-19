@@ -16,7 +16,7 @@ a string  '''
 
 #Variables
 exampleVar = print('This is a camel typed variable')
-example_var = print('This is the accepted type of variable typing')
+example_var = print('This is the accepted variable naming convention')
 e,f = (3,5) #Variable Unpacking
 print(e)
 print(f)
