@@ -92,3 +92,39 @@ def exmple():
     global x #defines x an a global variable
     print(x)
     # 'return' can also be used to make a variable globally accessible
+
+#Writing and appending to a file
+
+text = 'Sample Text to Save \n New line'
+saveFile = open('exampleFile.txt','w')
+saveFile.write(text)
+saveFile.close()
+
+appendMe = '\n New bit of information'
+appendFile= open('exampleFile.txt', 'a')
+appendFile.write(appendFile)
+appendFile.close()
+
+#Reading from a file
+readMe = open('exampleFile.txt', 'r').read()
+print(readMe)
+#to read line by line you call .readlines() instead of read()
+
+#Classes
+class calculator:
+    def addition(x,y):
+        added = x + y
+        print(added)
+    def subtraction(x,y):
+        sub = x - y
+        print(sub)
+    def multiplication(x,y):
+        mult = x * y
+        print(mult)
+    def division(x,y):
+        div = x / y
+        print(div)
+
+calculator.multiplication(3,5)
+#class      #method      #arguments
+#if __name__=='__main__': returns true if module being run is the main file
