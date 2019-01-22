@@ -16,7 +16,7 @@ a string  '''
 
 #Variables
 exampleVar = print('This is a camel typed variable')
-example_var = print('This is the accepted type of variable typing')
+example_var = print('This is the accepted variable naming convention')
 e,f = (3,5) #Variable Unpacking
 print(e)
 print(f)
@@ -128,3 +128,35 @@ class calculator:
 calculator.multiplication(3,5)
 #class      #method      #arguments
 #if __name__=='__main__': returns true if module being run is the main file
+
+#Taking user input
+name = input('What is your name? ')
+print('Hello',name)
+########################################################################################################################
+
+#Math Functions
+import statistics as s
+example_list = [1,1,4,2,1,4,5,8,3,2,5,7,4,3]
+example_list.sort() #sorts out the list
+example_tuples = (1,2,4,4,9)
+mean = s.mean(example_list)
+median = s.median(example_list)
+stdev = s.stdev(example_list)
+var = s.variance(example_list)
+example_list.insert(2,99)
+example_list.remove(example_list[3])
+
+#Importing third party librarys
+import example_mod #example_mod was created and saved in the same
+#directory
+example_mod.ex('Test')
+
+
+#multi-dimensional lists
+dimensional_list = [
+    [5,6],[6,7],[7,2],[2,5]
+]
+print(dimensional_list[1][0]) #prints out 6
+
+
+
