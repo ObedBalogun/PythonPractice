@@ -10,10 +10,22 @@ class Window(Frame):
         #quitButton = Button(self, text='Quit', command = self.client_exit)
         #quitButton.place(x=0, y=0)
         '''To create a menu list using tk you define your parameters
-        from the bottom-up i.e menu items -> menu-> append menu to frame'''
-        menu = Menu(self.master) #menu of the master window
-        self.master.config(menu=menu)
-        file = Menu(menu)
+        from the bottom-up i.e menu commands -> menu-> append menu to frame'''
+        master_menu = Menu(self.master)
+        self.master.config(menu=master_menu)
+        #File Button
+        file_button = Menu(master_menu)
+        file_button.add_command(label="Exit", command = self.client_exit)
+        master_menu.add_cascade(label = "File", menu=file_button)
+        #Edit Button
+        edit_button = Menu(master_menu)
+        edit_button.add_command(label = "Undo")
+        master_menu.add_cascade(label = "Edit", menu = edit_button)
+        #View button
+        view_button = Menu(master_menu)
+        view_button.add_command(label="Tools")
+        master_menu.add_cascade(label="View", menu=view_button)
+
 
     def client_exit(self):
         exit()
