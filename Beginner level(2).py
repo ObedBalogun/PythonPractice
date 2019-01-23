@@ -9,8 +9,7 @@ with open('example.csv') as csvfile:
         date = row[0]
         color = row[3]
         dates.append(date)
-        colors.append(colors)
-
+        colors.append(color)
 #Error handling using try and except
 #Tries this block of code
 try:

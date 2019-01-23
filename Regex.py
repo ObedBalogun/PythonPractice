@@ -36,8 +36,8 @@ example_string = '''
 Jessica is 15 years old, and Daniel is 27 years old.
 Edward is 97, and his grandfather, Oscar, is 102.
 '''
-ages = re.findall(r'\d{1,3}', example_string)
-names = re.findall(r'[A-Z][a-z]*', example_string)
+ages = re.findall(r'\d{1,3}', example_string) #finds all numbers (\d) with length between 1 and 3
+names = re.findall(r'[A-Z][a-z]*', example_string) #finds all string starting with an upper case letter followed by lowercases
 
 print(ages)
 print(names)
@@ -49,3 +49,6 @@ for eachName in names:
     x+=1
 
 print(ageDict)
+
+
+
