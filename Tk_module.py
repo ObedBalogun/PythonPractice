@@ -1,4 +1,6 @@
 from tkinter import *
+from PIL import Image, ImageTk
+
 class Window(Frame):
     def __init__(self, master = None):      #parent widget
         Frame.__init__(self, master)
@@ -19,14 +21,23 @@ class Window(Frame):
         master_menu.add_cascade(label = "File", menu=file_button)
         #Edit Button
         edit_button = Menu(master_menu)
-        edit_button.add_command(label = "Undo")
+        edit_button.add_command(label = "Show Image", command=self.showImg)
+        edit_button.add_command(label = "Show Text", command=self.showTxt)
         master_menu.add_cascade(label = "Edit", menu = edit_button)
         #View button
         view_button = Menu(master_menu)
         view_button.add_command(label="Tools")
         master_menu.add_cascade(label="View", menu=view_button)
 
-
+    def showImg(self):
+        load = Image.open('Diro.png')
+        render = ImageTk.PhotoImage(load)
+        img = Label(self, image = render)
+        img.image = render
+        img.place(x=0 ,y=0)
+    def showTxt(self):
+        text = Label(self, text = 'Hey there')
+        text.pack()
     def client_exit(self):
         exit()
 

@@ -12,6 +12,6 @@ req = url.Request(url_link,data)
 resp = url.urlopen(req)
 respData = resp.read()
 
-paragraphs = re.findall(r'<p>(.*?)</>', str(respData))  #.*? basically prints everything
+paragraphs = re.findall(r'<p>(.*?)</p>', str(respData))  #.*? basically prints everything
 for paragraph in paragraphs:
     print(paragraph)
