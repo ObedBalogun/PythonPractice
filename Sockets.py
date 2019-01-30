@@ -21,11 +21,11 @@ while (len(result) > 0):
 ###############################################THREADED PORT SCANNER###################################3###
 
 print_lock = threading.Lock()
-target = 'pythonprogramming.net'
+ip_address = 'pythonprogramming.net'
 def pscan(prt):
     sckt = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
-        con = sckt.connect((target,port))
+        con = sckt.connect((ip_address,port))
         with print_lock:
             print('port',prt,'is open')
         con.close()
